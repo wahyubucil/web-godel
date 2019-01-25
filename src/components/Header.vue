@@ -32,6 +32,8 @@ export default {
 .header {
   background: #ffffff;
   height: 70px;
+  position: fixed;
+  width: 100%;
 }
 
 .container {

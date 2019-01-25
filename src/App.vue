@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <div id="main"></div>
   </div>
 </template>
 
@@ -23,5 +24,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColorPrimary;
+}
+
+#main {
+  padding-top: 70px;
 }
 </style>
