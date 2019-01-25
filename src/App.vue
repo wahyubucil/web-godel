@@ -19,8 +19,12 @@ export default {
 <style lang="scss">
 @import './styles/normalize';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColorPrimary;
