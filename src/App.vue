@@ -10,6 +10,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/normalize';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
