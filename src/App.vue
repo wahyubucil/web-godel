@@ -36,6 +36,15 @@ export default {
   color: $textColorPrimary;
 }
 
+#nprogress .bar {
+  background: $colorPrimary;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $colorPrimary;
+  border-left-color: $colorPrimary;
+}
+
 .container {
   margin: auto;
   max-width: 1280px;
