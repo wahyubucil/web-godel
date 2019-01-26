@@ -1,10 +1,10 @@
 <template>
   <section id="product-info">
     <h2>MODELLING UNTUK SEMUA ORANG</h2>
-    <a href="#" class="product-list" v-for="(product, index) in productList" :key="index">
+    <router-link :to="product.url" class="product-list" v-for="(product, index) in productList" :key="index">
       <img :src="product.image">
       <h3>{{product.text}}</h3>
-    </a>
+    </router-link>
   </section>
 </template>
 
@@ -14,9 +14,9 @@ export default {
   data () {
     return {
       productList: [
-        { image: '/images/pevita.jpg', text: 'Telusuri' },
-        { image: '/images/v-bts.jpg', text: 'Casting' },
-        { image: '/images/jennie.jpg', text: 'Bookings' }
+        { image: '/images/pevita.jpg', text: 'Telusuri', url: '/model' },
+        { image: '/images/v-bts.jpg', text: 'Casting', url: '#' },
+        { image: '/images/jennie.jpg', text: 'Bookings', url: '#' }
       ]
     }
   }

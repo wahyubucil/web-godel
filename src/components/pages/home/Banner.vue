@@ -7,7 +7,7 @@
       <h1>Famous Is Easy!</h1>
       <h2>Cara Mudah <i>Menjadi</i> dan <i>Mencari</i> Model</h2>
       <div class="button-content">
-        <a href="#" v-for="(text, index) in buttonText" :key="index">{{text}}</a>
+        <router-link :to="button.url" v-for="(button, index) in buttonText" :key="index">{{button.text}}</router-link>
       </div>
     </div>
   </section>
@@ -20,7 +20,10 @@ export default {
   name: 'Banner',
   data () {
     return {
-      buttonText: ['Saya Seorang Model', 'Saya Mencari Model']
+      buttonText: [
+        { url: '#', text: 'Saya Seorang Model' },
+        { url: '/model', text: 'Saya Mencari Model' }
+      ]
     }
   },
   components: {
