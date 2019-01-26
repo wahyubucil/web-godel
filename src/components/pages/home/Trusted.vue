@@ -27,7 +27,7 @@ h2 {
 }
 
 .brands {
-  background: url('../assets/trust.gif') no-repeat center;
+  background: url('../../../assets/trust.gif') no-repeat center;
   height: 52px;
   margin-top: 32px;
   width: 100%;

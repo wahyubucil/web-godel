@@ -2,12 +2,7 @@
   <div id="app">
     <Header />
     <main id="main">
-      <Banner />
-      <ProductInfo />
-      <Trusted />
-      <Testimonials />
-      <SocialMedia />
-      <Infographic />
+      <Home />
     </main>
     <Footer />
   </div>
@@ -15,25 +10,16 @@
 
 <script>
 import Header from '@/components/Header.vue'
-import Banner from '@/components/Banner.vue'
-import ProductInfo from '@/components/ProductInfo.vue'
-import Trusted from '@/components/Trusted.vue'
-import Testimonials from '@/components/Testimonials.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import Infographic from '@/components/Infographic.vue'
 import Footer from '@/components/Footer.vue'
+
+import Home from '@/components/pages/home/Home.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Banner,
-    ProductInfo,
-    Trusted,
-    Testimonials,
-    SocialMedia,
-    Infographic,
-    Footer
+    Footer,
+    Home
   }
 }
 </script>

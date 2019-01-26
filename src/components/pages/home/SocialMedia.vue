@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 #social-media {
-  background: url('../assets/photoshoot.jpg') no-repeat center fixed;
+  background: url('../../../assets/photoshoot.jpg') no-repeat center fixed;
   background-size: cover;
   margin-top: 32px;
   padding: 64px 0;
