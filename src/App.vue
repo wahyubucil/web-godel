@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <main id="main">
-      <Home />
+      <router-view />
     </main>
     <Footer />
   </div>
@@ -12,14 +12,11 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
-import Home from '@/components/pages/home/Home.vue'
-
 export default {
   name: 'app',
   components: {
     Header,
-    Footer,
-    Home
+    Footer
   }
 }
 </script>
