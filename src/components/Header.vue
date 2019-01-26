@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   background: #ffffff;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, .5);
   height: 70px;
   padding: 5px 0;
   position: fixed;
