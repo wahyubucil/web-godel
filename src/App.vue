@@ -5,6 +5,7 @@
       <Banner />
       <ProductInfo />
       <Trusted />
+      <Testimonials />
     </main>
   </div>
 </template>
@@ -14,6 +15,7 @@ import Header from '@/components/Header.vue'
 import Banner from '@/components/Banner.vue'
 import ProductInfo from '@/components/ProductInfo.vue'
 import Trusted from '@/components/Trusted.vue'
+import Testimonials from '@/components/Testimonials.vue'
 
 export default {
   name: 'app',
@@ -22,6 +24,7 @@ export default {
     Banner,
     ProductInfo,
     Trusted,
+    Testimonials
   }
 }
 </script>
