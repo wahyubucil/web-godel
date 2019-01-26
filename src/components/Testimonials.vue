@@ -36,7 +36,7 @@ export default {
 
 h2 {
   font-size: 36px;
-  margin-top: 0;
+  margin-top: 8px;
   text-align: center;
   text-transform: uppercase;
 }

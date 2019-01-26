@@ -6,6 +6,7 @@
       <ProductInfo />
       <Trusted />
       <Testimonials />
+      <SocialMedia />
     </main>
     <Footer />
   </div>
@@ -17,6 +18,7 @@ import Banner from '@/components/Banner.vue'
 import ProductInfo from '@/components/ProductInfo.vue'
 import Trusted from '@/components/Trusted.vue'
 import Testimonials from '@/components/Testimonials.vue'
+import SocialMedia from '@/components/SocialMedia.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
@@ -27,6 +29,7 @@ export default {
     ProductInfo,
     Trusted,
     Testimonials,
+    SocialMedia,
     Footer
   }
 }
