@@ -1,7 +1,7 @@
 <template>
   <section id="model-list">
     <div class="container">
-      <div class="model-item" v-for="(model, index) in models" :key="index">
+      <div class="model-item" v-for="(model, index) in models" :key="index" @click="openDialog(model)">
         <img :src="model.image">
         <div class="text">
           <span>{{model.name}}</span>
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <Dialog :model="models[0]" />
+    <Dialog v-show="showDialog" :model="selectedModel" @close="closeDialog" />
   </section>
 </template>
 
@@ -21,24 +21,37 @@ export default {
   data () {
     return {
       models: [
-        { name: 'Jennie', age: 23, image: '/images/jennie.jpg', desc: 'Artis Korea yang berasal dari grup Blackpink ini juga memiliki passion terhadap dunia mode.' },
-        { name: 'Taehyung', age: 23, image: '/images/v-bts.jpg' },
-        { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg' },
-        { name: 'Dewayu', age: 19, image: '/images/dewayu.jpg' },
-        { name: 'Twinda Rarasati', age: 25, image: '/images/twinda.png' },
-        { name: 'Kristina', age: 21, image: '/images/kristina.jpg' },
-        { name: 'Cahya', age: 20, image: '/images/cahya.jpg' },
-        { name: 'Luhde', age: 22, image: '/images/luhde.jpg' },
-        { name: 'Nabila', age: 21, image: '/images/nabila.jpg' },
-        { name: 'Reni', age: 22, image: '/images/reni.jpg' },
-        { name: 'Santhi', age: 19, image: '/images/santhi.jpg' },
-        { name: 'Sinta', age: 20, image: '/images/sinta.jpg' },
-        { name: 'Vita', age: 21, image: '/images/vita.jpg' }
-      ]
+        { name: 'Jennie', age: 23, image: '/images/jennie.jpg', desc: 'Artis Korea yang berasal dari grup Blackpink ini juga memiliki passion terhadap dunia mode' },
+        { name: 'Taehyung', age: 23, image: '/images/v-bts.jpg', desc: 'Anggota BTS ini memiliki daya tarik yang luar biasa sebagai model dan pastinya banyak menarik perhatian wanita' },
+        { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg', desc: 'Artis dari Indonesia yang sangat populer. Bahkan telah menjadi Brand Ambassador salah satu platform fashion' },
+        { name: 'Dewayu', age: 19, image: '/images/dewayu.jpg', desc: 'Model favorit STMIK Primakara. Pengalamannya sebagai brand ambassador STMIK Primakara sudah tidak diragukan lagi' },
+        { name: 'Twinda Rarasati', age: 25, image: '/images/twinda.png', desc: 'Presenter, model, artis dari Indonesia yang kembar ini merupakan influencer yang luar biasa' },
+        { name: 'Kristina', age: 21, image: '/images/kristina.jpg', desc: 'Gaya kasual adalah yang terbaik menurutnya' },
+        { name: 'Cahya', age: 20, image: '/images/cahya.jpg', desc: 'Modelling dan olahraga. Dua hobi favoritnya' },
+        { name: 'Luhde', age: 22, image: '/images/luhde.jpg', desc: 'Sangat senang menjadi model Video Clip dengan konsep yang menarik' },
+        { name: 'Nabila', age: 21, image: '/images/nabila.jpg', desc: 'Photoshoot sambil berpetualang, mengapa tidak?' },
+        { name: 'Reni', age: 22, image: '/images/reni.jpg', desc: 'Sederhana namun elegan' },
+        { name: 'Santhi', age: 19, image: '/images/santhi.jpg', desc: 'Musik dan Modelling, hal yang menyatukan jiwanya' },
+        { name: 'Sinta', age: 20, image: '/images/sinta.jpg', desc: 'Muda, imut, enerjik, sesuatu langka yang dimilikinya' },
+        { name: 'Vita', age: 21, image: '/images/vita.jpg', desc: 'Fashion dan modelling sudah menjadi bagian hidupnya' }
+      ],
+      showDialog: false,
+      selectedModel: {}
     }
   },
   components: {
     Dialog
+  },
+
+  methods: {
+    openDialog (model) {
+      this.showDialog = true
+      this.selectedModel = model
+    },
+    closeDialog () {
+      this.showDialog = false
+      this.selectedModel = {}
+    }
   }
 }
 </script>
@@ -67,7 +80,7 @@ export default {
   }
 
   &:hover {
-    box-shadow: 0 0 10px rgba(#000, .5);
+    box-shadow: 0 0 15px rgba(#000, .5);
   }
 
   img {

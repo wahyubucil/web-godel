@@ -6,7 +6,7 @@
         <div class="info-text">
           <p class="info-name">{{model.name}}</p>
           <span>{{model.age}} Tahun</span>
-          <p>{{model.desc}}</p>
+          <p class="info-desc">{{model.desc}}</p>
         </div>
       </div>
       <div class="form">
@@ -33,7 +33,7 @@
           </div>
         </form>
       </div>
-      <div class="close-button">&times;</div>
+      <div class="close-button" @click="triggerClose">&times;</div>
     </div>
   </div>
 </template>
@@ -53,6 +53,11 @@ export default {
         projectDesc: ''
       }
     }
+  },
+  methods: {
+    triggerClose () {
+      this.$emit('close')
+    }
   }
 }
 </script>
@@ -65,7 +70,7 @@ export default {
   height: 100%;
   left: 0;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 99999;
@@ -102,6 +107,11 @@ export default {
     margin: 0;
     margin-bottom: 8px;
     font-weight: 700;
+  }
+
+  .info-desc {
+    line-height: 1.2;
+    margin-bottom: 0;
   }
 }
 
