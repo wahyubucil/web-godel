@@ -5,7 +5,7 @@
     <div class="testimonials">
       <div class="testimonial" v-for="(testimonial, index) in testimonials" :key="index">
         <img :src="testimonial.image">
-        <p>{{testimonial.text}}</p>
+        <p>"{{testimonial.text}}"</p>
         <div class="name">{{testimonial.name}}</div>
       </div>
     </div>

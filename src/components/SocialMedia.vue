@@ -3,7 +3,9 @@
     <div class="content">
       <h2>Connect Socially With Us</h2>
       <a
-        href="#"
+        :href="socialMedia.url"
+        target="_blank"
+        rel="noopener"
         v-for="(socialMedia, index) in socialMediaList"
         :key="index"
         :style="{ backgroundImage: 'url(' + socialMedia.icon + ')', backgroundColor: socialMedia.background }">
@@ -18,9 +20,9 @@ export default {
   data () {
     return {
       socialMediaList: [
-        { icon: '/images/icons/facebook.svg', background: '#7281af' },
-        { icon: '/images/icons/twitter.svg', background: '#67bee5' },
-        { icon: '/images/icons/instagram.svg', background: '#688cb3' }
+        { icon: '/images/icons/facebook.svg', background: '#7281af', url: '#' },
+        { icon: '/images/icons/twitter.svg', background: '#67bee5', url: '#' },
+        { icon: '/images/icons/instagram.svg', background: '#688cb3', url: 'https://instagram.com/godel_official' }
       ]
     }
   }
