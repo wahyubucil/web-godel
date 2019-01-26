@@ -4,6 +4,7 @@
     <main id="main">
       <Banner />
       <ProductInfo />
+      <Trusted />
     </main>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import Header from '@/components/Header.vue'
 import Banner from '@/components/Banner.vue'
 import ProductInfo from '@/components/ProductInfo.vue'
+import Trusted from '@/components/Trusted.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
     Banner,
-    ProductInfo
+    ProductInfo,
+    Trusted,
   }
 }
 </script>
