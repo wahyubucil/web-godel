@@ -7,6 +7,7 @@
       <Trusted />
       <Testimonials />
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Banner from '@/components/Banner.vue'
 import ProductInfo from '@/components/ProductInfo.vue'
 import Trusted from '@/components/Trusted.vue'
 import Testimonials from '@/components/Testimonials.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
@@ -24,7 +26,8 @@ export default {
     Banner,
     ProductInfo,
     Trusted,
-    Testimonials
+    Testimonials,
+    Footer
   }
 }
 </script>
@@ -41,6 +44,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColorPrimary;
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
 }
 
 #main {

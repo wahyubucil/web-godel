@@ -43,8 +43,6 @@ export default {
   align-items: center;
   display: flex;
   height: 100%;
-  margin: auto;
-  max-width: 1280px;
 }
 
 .logo {

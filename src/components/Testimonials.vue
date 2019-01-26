@@ -34,11 +34,6 @@ export default {
   padding: 64px 0;
 }
 
-.container {
-  margin: auto;
-  max-width: 1280px;
-}
-
 h2 {
   font-size: 36px;
   margin-top: 0;
