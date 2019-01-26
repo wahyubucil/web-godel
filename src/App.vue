@@ -1,21 +1,24 @@
 <template>
   <div id="app">
     <Header />
-    <div id="main">
+    <main id="main">
       <Banner />
-    </div>
+      <ProductInfo />
+    </main>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import Banner from '@/components/Banner.vue'
+import ProductInfo from '@/components/ProductInfo.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Banner
+    Banner,
+    ProductInfo
   }
 }
 </script>

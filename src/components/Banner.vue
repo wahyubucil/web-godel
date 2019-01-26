@@ -1,5 +1,5 @@
 <template>
-  <div id="banner">
+  <section id="banner">
     <parallax :speed-factor="0.3">
       <img src="@/assets/banner-photo.jpg">
     </parallax>
@@ -10,7 +10,7 @@
         <a href="#" v-for="(text, index) in buttonText" :key="index">{{text}}</a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
