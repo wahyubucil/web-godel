@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import './styles/normalize';
+@import '~nprogress/nprogress.css';
 
 *, *::before, *::after {
   box-sizing: border-box;

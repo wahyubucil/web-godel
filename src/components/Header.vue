@@ -3,14 +3,14 @@
   <div class="container">
     <img src="@/assets/logo.png" class="logo">
     <nav id="desktop-menu">
-      <a
-        href="#"
+      <router-link
+        :to="menu.url"
         v-for="(menu, index) in menuList"
         :key="index"
-        :class="{ active: menu === activeMenu }"
+        :class="{ active: menu.url === $route.path }"
       >
-        {{menu}}
-      </a>
+        {{menu.name}}
+      </router-link>
     </nav>
   </div>
 </header>
@@ -21,8 +21,13 @@ export default {
   name: 'Header',
   data () {
     return {
-      menuList: ['Home', 'Model', 'Casting', 'Rankings', 'Industry Members'],
-      activeMenu: 'Home'
+      menuList: [
+        { name: 'Home', url: '/' },
+        { name: 'Model', url: '/model' },
+        { name: 'Casting', url: '#' },
+        { name: 'Rankings', url: '#' },
+        { name: 'Industry Members', url: '#' }
+      ]
     }
   }
 }
