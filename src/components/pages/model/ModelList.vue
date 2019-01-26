@@ -9,16 +9,19 @@
         </div>
       </div>
     </div>
+    <Dialog :model="models[0]" />
   </section>
 </template>
 
 <script>
+import Dialog from './Dialog.vue'
+
 export default {
   name: 'ModelList',
   data () {
     return {
       models: [
-        { name: 'Jennie', age: 23, image: '/images/jennie.jpg' },
+        { name: 'Jennie', age: 23, image: '/images/jennie.jpg', desc: 'Artis Korea yang berasal dari grup Blackpink ini juga memiliki passion terhadap dunia mode.' },
         { name: 'Taehyung', age: 23, image: '/images/v-bts.jpg' },
         { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg' },
         { name: 'Dewayu', age: 19, image: '/images/dewayu.jpg' },
@@ -33,6 +36,9 @@ export default {
         { name: 'Vita', age: 21, image: '/images/vita.jpg' }
       ]
     }
+  },
+  components: {
+    Dialog
   }
 }
 </script>
