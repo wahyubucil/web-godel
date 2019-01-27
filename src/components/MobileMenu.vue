@@ -6,6 +6,7 @@
         v-for="(menu, index) in menuList"
         :key="index"
         :class="{ active: menu.url === $route.path }"
+        @click.native="closeMenu"
       >
         {{menu.name}}
       </router-link>
