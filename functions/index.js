@@ -7,8 +7,25 @@ exports.sendBookingEmail = functions.https.onRequest((req, res) => {
     const { name, email, phoneNumber, projectDesc } = req.body.bookingData
     const model = req.body.model
 
-    if (name.length < 1 || email.length < 1 || phoneNumber.length < 1 || projectDesc.length < 1) {
-      return res.status(400).send({ error: 'Something is wrong' })
+    const error = []
+    if (name.length < 1) {
+      error.push('Mohon mengisi Nama dengan benar')
+    }
+
+    if (email.length < 1) {
+      error.push('Mohon mengisi Email dengan benar')
+    }
+
+    if (phoneNumber.length < 1) {
+      error.push('Mohon mengisi Nomor HP dengan benar')
+    }
+
+    if (projectDesc.length < 1) {
+      error.push('Mohon mengisi Deskripsi Project dengan benar')
+    }
+
+    if (error.length > 0) {
+      return res.status(400).send({error})
     }
 
     const template = `
@@ -97,7 +114,7 @@ exports.sendBookingEmail = functions.https.onRequest((req, res) => {
     }
 
     transporter.sendMail(mailOptions, (err, info) => {
-      if (err) return res.send(err)
+      if (err) return res.status(500).send(err)
 
       return res.send(info)
     })
