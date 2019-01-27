@@ -1,6 +1,6 @@
 <template>
   <section id="banner">
-    <parallax :speed-factor="0.3">
+    <parallax :speed-factor="0.3" :section-height="100">
       <img src="@/assets/banner-photo.jpg">
     </parallax>
     <div class="banner-content">
@@ -56,11 +56,27 @@ export default {
     font-size: 58px;
     margin: 0;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 36px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 28px;
+    }
   }
 
   h2 {
     font-size: 24px;
     margin-top: 10px;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -82,6 +98,16 @@ export default {
 
     &:hover {
       background: $colorPrimary;
+    }
+
+    @media only screen and (max-width: 560px) {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 16px;
     }
   }
 }

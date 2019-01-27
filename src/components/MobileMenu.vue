@@ -41,6 +41,11 @@ export default {
   width: 50vw;
   will-change: left;
 
+  @media only screen and (max-width: 375px) {
+    left: -70vw;
+    width: 70vw;
+  }
+
   &.active {
     left: 0;
   }
