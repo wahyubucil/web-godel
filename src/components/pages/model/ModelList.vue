@@ -62,6 +62,24 @@ export default {
   margin-top: 42px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 860px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .model-item {
   background: #ffffff;
   border-radius: 16px;
@@ -75,12 +93,37 @@ export default {
   transition: all .3s ease-in-out;
   width: 22%;
 
-  &:nth-child(4n) {
-    margin-right: 0;
+  @media only screen and (min-width: 1025px) {
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 
   &:hover {
     box-shadow: 0 0 15px rgba(#000, .5);
+  }
+
+  @media only screen and (min-width: 641px) and (max-width: 1024px) {
+    margin-right: 5%;
+    width: 30%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media only screen and (min-width: 421px) and (max-width: 640px) {
+    margin-right: 4%;
+    width: 48%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    margin-right: 0;
+    width: 100%;
   }
 
   img {
