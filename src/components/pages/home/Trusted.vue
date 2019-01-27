@@ -31,5 +31,9 @@ h2 {
   height: 52px;
   margin-top: 32px;
   width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    background-size: auto 50%;
+  }
 }
 </style>

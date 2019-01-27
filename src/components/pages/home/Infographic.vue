@@ -53,7 +53,21 @@ export default {
     &:first-child {
       font-weight: 700;
       font-size: 32px;
-      margin-bottom: 6px
+      margin-bottom: 6px;
+
+      @media only screen and (max-width: 480px) {
+        font-size: 24px;
+      }
+
+      @media only screen and (max-width: 375px) {
+        font-size: 18px;
+      }
+    }
+
+    &:last-child {
+      @media only screen and (max-width: 375px) {
+        font-size: 12px;
+      }
     }
   }
 }

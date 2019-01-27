@@ -57,6 +57,14 @@ export default {
     color: #ffffff;
     font-size: 32px;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 24px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 20px;
+    }
   }
 
   a {

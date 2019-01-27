@@ -39,6 +39,10 @@ export default {
     margin-bottom: 36px;
     margin-top: 0;
     text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -49,6 +53,12 @@ export default {
   position: relative;
   transition: all .3s ease-in-out;
   width: 30%;
+
+  @media only screen and (max-width: 640px) {
+    margin-bottom: 24px;
+    margin-right: 0;
+    width: 100%;
+  }
 
   &:last-child {
     margin-right: 0;

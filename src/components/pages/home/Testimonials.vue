@@ -39,6 +39,10 @@ h2 {
   margin-top: 8px;
   text-align: center;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 375px) {
+    font-size: 32px;
+  }
 }
 
 .testimonials {
@@ -51,6 +55,16 @@ h2 {
   text-align: center;
   vertical-align: top;
   width: 30%;
+
+  @media only screen and (max-width: 640px) {
+    margin-right: 0;
+    margin-bottom: 56px;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
@@ -67,6 +81,10 @@ h2 {
     font-size: 18px;
     font-style: italic;
     line-height: 1.5;
+
+    @media only screen and (max-width: 375px) {
+      font-size: 16px;
+    }
   }
 
   .name {
