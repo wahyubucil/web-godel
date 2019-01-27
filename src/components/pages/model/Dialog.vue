@@ -83,6 +83,10 @@ export default {
   max-height: 90vh;
   position: relative;
   width: 50vw;
+
+  @media only screen and (max-width: 1024px) {
+    width: 90vw;
+  }
 }
 
 .preview-info {
@@ -90,6 +94,10 @@ export default {
   border-bottom: 2px solid #f1f1f1;
   display: flex;
   padding: 32px;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 
   img {
     border-radius: 50%;
@@ -100,6 +108,12 @@ export default {
 
   .info-text {
     margin-left: 32px;
+
+    @media only screen and (max-width: 480px) {
+      margin-left: 0;
+      margin-top: 16px;
+      text-align: center;
+    }
   }
 
   .info-name {
@@ -121,6 +135,10 @@ export default {
   h3 {
     font-size: 28px;
     text-align: center;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 20px;
+    }
 
     span {
       color: $colorPrimary;
