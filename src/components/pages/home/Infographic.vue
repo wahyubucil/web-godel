@@ -37,6 +37,11 @@ export default {
   justify-content: space-between;
   margin: auto;
   max-width: 960px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .infographic {

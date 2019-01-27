@@ -1,8 +1,10 @@
 <template>
 <header class="header">
   <div class="container">
-    <img src="@/assets/logo.png" class="logo">
-    <nav id="desktop-menu">
+    <div class="logo">
+      <img src="@/assets/logo.png">
+    </div>
+    <nav v-if="isDesktopMenu" id="desktop-menu">
       <router-link
         :to="menu.url"
         v-for="(menu, index) in menuList"
@@ -12,11 +14,19 @@
         {{menu.name}}
       </router-link>
     </nav>
+    <a v-else href="javascript:void(0)" @click="openMobileMenu" class="open-mobile-menu">&#9776;</a>
   </div>
+  <MobileMenu
+    v-if="!isDesktopMenu"
+    :menu-list="menuList"
+    :open="mobileMenuOpen"
+    @close="closeMobileMenu" />
 </header>
 </template>
 
 <script>
+import MobileMenu from './MobileMenu.vue'
+
 export default {
   name: 'Header',
   data () {
@@ -27,7 +37,24 @@ export default {
         { name: 'Casting', url: '#' },
         { name: 'Rankings', url: '#' },
         { name: 'Industry Members', url: '#' }
-      ]
+      ],
+      mobileMenuOpen: false
+    }
+  },
+  computed: {
+    isDesktopMenu () {
+      return window.innerWidth > 768
+    }
+  },
+  components: {
+    MobileMenu
+  },
+  methods: {
+    openMobileMenu () {
+      this.mobileMenuOpen = true
+    },
+    closeMobileMenu () {
+      this.mobileMenuOpen = false
     }
   }
 }
@@ -51,8 +78,18 @@ export default {
 }
 
 .logo {
-  display: inline-block;
   height: 100%;
+
+  @media only screen and (max-width: 768px) {
+    flex-grow: 1;
+    order: 2;
+    text-align: center;
+  }
+
+  img {
+    display: inline-block;
+    height: 100%;
+  }
 }
 
 #desktop-menu {
@@ -74,5 +111,12 @@ export default {
       margin-right: 0;
     }
   }
+}
+
+.open-mobile-menu {
+  color: $colorPrimary;
+  font-size: 32px;
+  order: 1;
+  text-decoration: none;
 }
 </style>

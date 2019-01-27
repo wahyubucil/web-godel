@@ -48,6 +48,10 @@ export default {
 .container {
   margin: auto;
   max-width: 1280px;
+
+  @media only screen and (max-width: 1300px) {
+    padding: 0 16px;
+  }
 }
 
 #main {

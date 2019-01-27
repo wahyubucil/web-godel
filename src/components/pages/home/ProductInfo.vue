@@ -26,8 +26,13 @@ export default {
 <style lang="scss" scoped>
 #product-info {
   margin: auto;
+  max-width: 960px;
   padding: 64px 0;
-  width: 960px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   h2 {
     font-size: 32px;
