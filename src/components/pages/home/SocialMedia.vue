@@ -33,7 +33,6 @@ export default {
 #social-media {
   background: url('../../../assets/photoshoot.jpg') no-repeat center fixed;
   background-size: cover;
-  margin-top: 32px;
   padding: 64px 0;
   position: relative;
 

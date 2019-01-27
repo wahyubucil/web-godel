@@ -31,7 +31,8 @@ export default {
 
 <style lang="scss" scoped>
 #testimonials {
-  padding: 64px 0;
+  background: #F1F1F1;
+  padding: 64px 0 96px 0;
 }
 
 h2 {
@@ -88,7 +89,7 @@ h2 {
   }
 
   .name {
-    border-top: 1px solid #f1f1f1;
+    border-top: 1px solid #ABABAB;
     font-weight: 700;
     padding-top: 16px;
   }
