@@ -26,14 +26,11 @@ export default {
         { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg', desc: 'Artis dari Indonesia yang sangat populer. Bahkan telah menjadi Brand Ambassador salah satu platform fashion' },
         { name: 'Dewayu', age: 19, image: '/images/dewayu.jpg', desc: 'Model favorit STMIK Primakara. Pengalamannya sebagai brand ambassador STMIK Primakara sudah tidak diragukan lagi' },
         { name: 'Twinda Rarasati', age: 25, image: '/images/twinda.png', desc: 'Presenter, model, artis dari Indonesia yang kembar ini merupakan influencer yang luar biasa' },
-        { name: 'Kristina', age: 21, image: '/images/kristina.jpg', desc: 'Gaya kasual adalah yang terbaik menurutnya' },
-        { name: 'Cahya', age: 20, image: '/images/cahya.jpg', desc: 'Modelling dan olahraga. Dua hobi favoritnya' },
-        { name: 'Luhde', age: 22, image: '/images/luhde.jpg', desc: 'Sangat senang menjadi model Video Clip dengan konsep yang menarik' },
-        { name: 'Nabila', age: 21, image: '/images/nabila.jpg', desc: 'Photoshoot sambil berpetualang, mengapa tidak?' },
-        { name: 'Reni', age: 22, image: '/images/reni.jpg', desc: 'Sederhana namun elegan' },
-        { name: 'Santhi', age: 19, image: '/images/santhi.jpg', desc: 'Musik dan Modelling, hal yang menyatukan jiwanya' },
-        { name: 'Sinta', age: 20, image: '/images/sinta.jpg', desc: 'Muda, imut, enerjik, sesuatu langka yang dimilikinya' },
-        { name: 'Vita', age: 21, image: '/images/vita.jpg', desc: 'Fashion dan modelling sudah menjadi bagian hidupnya' }
+        { name: 'Indah Krisna Devi', age: 20, image: '/images/indah-krisna-devi.jpg', desc: 'Gaya kasual adalah yang terbaik menurutnya' },
+        { name: 'Ida Ayu Santhi', age: 20, image: '/images/ida-ayu-santhi.jpg', desc: 'Sangat senang menjadi model Video Clip dengan konsep yang menarik' },
+        { name: 'Victor', age: 20, image: '/images/victor.jpg', desc: 'Photoshoot sambil berpetualang, mengapa tidak?' },
+        { name: 'Ida Ayu Aprilia', age: 20, image: '/images/ida-ayu-aprilia.jpg', desc: 'Sederhana namun elegan' },
+        { name: 'Nitya Wirasari', age: 20, image: '/images/nitya-wirasari.jpg', desc: 'Musik dan Modelling, hal yang menyatukan jiwanya' }
       ],
       showDialog: false,
       selectedModel: {}

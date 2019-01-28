@@ -21,8 +21,8 @@ export default {
     return {
       testimonials: [
         { image: '/images/dewayu.jpg', name: 'Dewayu', text: 'Saya merekomendasikan semua model untuk mendaftar casting online di Godel; itu hal terbaik yang terjadi dalam karier saya. Saya sangat senang bahwa platform ini telah memberi saya begitu banyak peluang!' },
-        { image: '/images/kristina.jpg', name: 'Kristina', text: 'Godel merupakan teknologi terdepan dalam industri fashion. Bagi saya itu membuat perbedaan besar. Saya mengupgrade akun saya ke Premium untuk memiliki akses ke semua fitur! Godel sangatlah luar biasa!' },
-        { image: '/images/cahya.jpg', name: 'Cahya', text: 'Godel adalah hal yang anda harus ketahui. Berkat casting online mereka, saya telah mengerjakan berbagai pemotretan untuk kampanye hebat! Tentunya platform terbaik untuk menemukan tempat Anda di dunia mode' }
+        { image: '/images/indah-krisna-devi.jpg', name: 'Indah Krisna Devi', text: 'Godel merupakan teknologi terdepan dalam industri fashion. Bagi saya itu membuat perbedaan besar. Saya mengupgrade akun saya ke Premium untuk memiliki akses ke semua fitur! Godel sangatlah luar biasa!' },
+        { image: '/images/ida-ayu-santhi.jpg', name: 'Ida Ayu Santhi', text: 'Godel adalah hal yang anda harus ketahui. Berkat casting online mereka, saya telah mengerjakan berbagai pemotretan untuk kampanye hebat! Tentunya platform terbaik untuk menemukan tempat Anda di dunia mode' }
       ]
     }
   }
