@@ -76,6 +76,7 @@ export default {
               title: 'Berhasil',
               text: 'Kami akan segera menghubungi anda :)',
               type: 'success',
+              allowOutsideClick: false,
               onClose: () => {
                 this.$router.push('/')
               }
