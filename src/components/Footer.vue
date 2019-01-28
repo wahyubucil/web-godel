@@ -7,7 +7,7 @@
       </div>
       <div class="footer-info">
         <div class="copyright">&copy; 2019 Godel</div>
-        <div class="email">Contact us at: <b>godel6006@gmail.com</b></div>
+        <div class="email">Contact us at: <a href="mailto:hello.godel@gmail.com"><b>hello.godel@gmail.com</b></a></div>
       </div>
     </div>
   </footer>
@@ -48,6 +48,11 @@ p {
 
   .copyright, .email {
     font-size: 12px;
+  }
+
+  .email a {
+    color: #999999;
+    text-decoration: none;
   }
 }
 </style>
