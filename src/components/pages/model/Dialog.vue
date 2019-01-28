@@ -14,19 +14,19 @@
         <form @submit.prevent="bookingModel">
           <div class="form-group">
             <label for="name">Nama Lengkap</label>
-            <input id="name" type="text" v-model="bookingData.name">
+            <input id="name" type="text" v-model="bookingData.name" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" type="email" v-model="bookingData.email">
+            <input id="email" type="email" v-model="bookingData.email" required>
           </div>
           <div class="form-group">
             <label for="phoneNumber">Nomor HP</label>
-            <input id="phoneNumber" type="tel" v-model="bookingData.phoneNumber">
+            <input id="phoneNumber" type="tel" v-model="bookingData.phoneNumber" required>
           </div>
           <div class="form-group">
             <label for="projectDesc">Deskripsi Project Yang Ingin Ditawarkan</label>
-            <textarea id="projectDesc" v-model="bookingData.projectDesc"></textarea>
+            <textarea id="projectDesc" v-model="bookingData.projectDesc" required></textarea>
           </div>
           <div class="button-form">
             <button type="submit">Kirim</button>
@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Dialog',
   props: {
@@ -57,6 +59,53 @@ export default {
   methods: {
     triggerClose () {
       this.$emit('close')
+    },
+
+    bookingModel () {
+      this.$swal.fire({
+        text: 'Mohon tunggu, kami sedang memproses booking anda :)',
+        onBeforeOpen: () => {
+          this.$swal.showLoading()
+        },
+        onOpen: () => {
+          axios.post('https://us-central1-godel-web.cloudfunctions.net/sendBookingEmail', {
+            bookingData: this.bookingData,
+            model: this.model
+          }).then(response => {
+            this.$swal.fire({
+              title: 'Berhasil',
+              text: 'Kami akan segera menghubungi anda :)',
+              type: 'success',
+              onClose: () => {
+                this.$router.push('/')
+              }
+            })
+          }).catch(err => {
+            const errorMessages = err.response.data.error
+            if (errorMessages) {
+              let errorTemplate = '<ul>'
+              errorMessages.forEach(errorMessage => {
+                errorTemplate += `<li>${errorMessage}</li>`
+              })
+              errorTemplate += '</ul>'
+
+              this.$swal.fire({
+                title: 'Sepertinya ada kesalahan',
+                html: errorTemplate,
+                type: 'error'
+              })
+            } else {
+              this.$swal.fire(
+                'Oops, error',
+                'Mohon coba lagi',
+                'error'
+              )
+              console.log(err.response)
+            }
+          })
+        },
+        allowOutsideClick: false
+      })
     }
   }
 }
@@ -73,7 +122,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 1000;
 }
 
 .dialog-content {
@@ -172,6 +221,7 @@ export default {
 
   button {
     background: #af0404;
+    border: none;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
