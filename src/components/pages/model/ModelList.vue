@@ -21,11 +21,11 @@ export default {
   data () {
     return {
       models: [
-        { name: 'Jennie', age: 23, image: '/images/jennie.jpg', desc: 'Artis Korea yang berasal dari grup Blackpink ini juga memiliki passion terhadap dunia mode' },
-        { name: 'Taehyung', age: 23, image: '/images/v-bts.jpg', desc: 'Anggota BTS ini memiliki daya tarik yang luar biasa sebagai model dan pastinya banyak menarik perhatian wanita' },
-        { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg', desc: 'Artis dari Indonesia yang sangat populer. Bahkan telah menjadi Brand Ambassador salah satu platform fashion' },
+        // { name: 'Jennie', age: 23, image: '/images/jennie.jpg', desc: 'Artis Korea yang berasal dari grup Blackpink ini juga memiliki passion terhadap dunia mode' },
+        // { name: 'Taehyung', age: 23, image: '/images/v-bts.jpg', desc: 'Anggota BTS ini memiliki daya tarik yang luar biasa sebagai model dan pastinya banyak menarik perhatian wanita' },
+        // { name: 'Pevita Pearce', age: 26, image: '/images/pevita.jpg', desc: 'Artis dari Indonesia yang sangat populer. Bahkan telah menjadi Brand Ambassador salah satu platform fashion' },
         { name: 'Dewayu', age: 19, image: '/images/dewayu.jpg', desc: 'Model favorit STMIK Primakara. Pengalamannya sebagai brand ambassador STMIK Primakara sudah tidak diragukan lagi' },
-        { name: 'Twinda Rarasati', age: 25, image: '/images/twinda.png', desc: 'Presenter, model, artis dari Indonesia yang kembar ini merupakan influencer yang luar biasa' },
+        // { name: 'Twinda Rarasati', age: 25, image: '/images/twinda.png', desc: 'Presenter, model, artis dari Indonesia yang kembar ini merupakan influencer yang luar biasa' },
         { name: 'Indah Krisna Devi', age: 20, image: '/images/indah-krisna-devi.jpg', desc: 'Gaya kasual adalah yang terbaik menurutnya' },
         { name: 'Ida Ayu Santhi', age: 20, image: '/images/ida-ayu-santhi.jpg', desc: 'Sangat senang menjadi model Video Clip dengan konsep yang menarik' },
         { name: 'Victor', age: 20, image: '/images/victor.jpg', desc: 'Photoshoot sambil berpetualang, mengapa tidak?' },
